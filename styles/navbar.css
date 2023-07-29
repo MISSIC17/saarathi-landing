@@ -1,0 +1,92 @@
+:root {
+  --primary: rgb(0, 56, 146);
+  --sec: #dc143c;
+  --tert: #64ab47;
+}
+#navops > a > li > p,
+#navops > a > li > span > p {
+  position: relative;
+}
+#navops > a > li > p::after,
+#navops > a > li > span > p::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  translate: -50%;
+  height: 0.175em;
+  width: 0%;
+  background: #dc143c;
+  transition: all 300ms ease-out;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  translate: -50%;
+  height: 0.175em;
+  width: 105%;
+  background: #dc143c;
+}
+#navops > a:hover > li > p::after,
+#navops > a:hover > li > span > p::after {
+  width: 105%;
+}
+#navops {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.44) 0%,
+      rgba(0, 0, 0, 0.44) 100%
+    ),
+    #003892;
+}
+
+#about-hover-ops {
+  padding: 0.5em 1em 0.5em 1em;
+  background: none;
+  transition: 300ms ease-out;
+}
+@media screen and (min-width: 1024px) {
+  #navops {
+    background: none;
+  }
+  #about-hover-ops {
+    padding: 0em 0em;
+    background: none;
+    transition: 300ms ease-out;
+    display:flex;
+  }
+
+  #about-hover-ops > li {
+    width: 100%;
+    padding: 0.5em 1em 0.5em 0.5em;
+    transition: 200ms ease-out;
+  }
+  #about-hover-ops > li:hover {
+    background-color: rgba(0, 56, 146, 0.1);
+  }
+  #about-hover-ops > li > a > p {
+    transition: 200ms ease-out;
+  }
+  #about-hover-ops > li:hover > a > p {
+    transform: translateX(10%);
+  }
+  #about-hover-ops {
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-50%) scaleY(0.1);
+    transition: 300ms ease-out;
+  }
+  #about-ops:hover > #about-hover-ops {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0%) scaleY(1);
+  }
+}
+
+#about-hover-ops > li {
+  width: 100%;
+  padding: 0.5em 1em 0.5em 0.5em;
+  transition: 200ms ease-out;
+}
