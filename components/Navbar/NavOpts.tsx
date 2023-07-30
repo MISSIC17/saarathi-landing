@@ -12,20 +12,6 @@ interface NavOptsProps {
 const NavOps = ({ screenWidth }: NavOptsProps) => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [aboutOptsOpen, setAboutOptsOpen] = useState<boolean>(false);
-  // const [screenWidth, setScreenWidth] = useState<Number>(0);
-  // function resizeHandler() {
-  //   setScreenWidth(window.innerWidth);
-  //   console.log(screenWidth)
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener("load", resizeHandler);
-  //   return () => window.removeEventListener("load", resizeHandler);
-  // }, [screenWidth]);
-  // useEffect(() => {
-  //   window.addEventListener("resize", resizeHandler);
-  //   return () => window.removeEventListener("resize", resizeHandler);
-  // }, [screenWidth]);
   return (
     <>
       {screenWidth < 1024 && (
@@ -35,9 +21,9 @@ const NavOps = ({ screenWidth }: NavOptsProps) => {
       )}
       <ul
         id="navops"
-        className={`flex absolute px-4 lg:relative flex-col text-[1.2em] lg:text-[1em] lg:flex-row items-start lg:justify-center bg-primary lg:bg-opacity-0 top-0 h-[100vh] w-[90vw] ${
-          !sidebarOpen && screenWidth < 1024 ? "-right-[100%]" : "right-0"
-        } lg:right-0 z-10 text-white lg:text-black lg:items-center lg:h-full vidaloka font-bold overflow-y-scroll lg:overflow-y-visible`}
+        className={`absolute px-4 lg:relative flex-col text-[1.2em] lg:text-[1em] lg:flex-row items-start lg:justify-center bg-primary lg:bg-opacity-0 top-0 h-[100vh] w-[90vw] ${
+          !sidebarOpen && screenWidth < 1024 ? "hidden -right-[100%]" : "flex right-0"
+        } lg:right-0 z-10 text-white lg:text-black lg:items-center lg:h-full vidaloka font-bold overflow-y-scroll lg:overflow-y-visible lg:w-fit`}
       >
         <IconContext.Provider value={{ color: "white" }}>
           <VscChromeClose
