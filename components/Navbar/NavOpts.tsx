@@ -22,13 +22,18 @@ const NavOps = ({ screenWidth }: NavOptsProps) => {
       <ul
         id="navops"
         className={`absolute px-4 lg:relative flex-col text-[1.2em] lg:text-[1em] lg:flex-row items-start lg:justify-center bg-primary lg:bg-opacity-0 top-0 h-[100vh] w-[90vw] ${
-          !sidebarOpen && screenWidth < 1024 ? "hidden -right-[100%]" : "flex right-0"
-        } lg:right-0 z-10 text-white lg:text-black lg:items-center lg:h-full vidaloka font-bold overflow-y-scroll lg:overflow-y-visible lg:w-fit`}
+          screenWidth >= 1024
+            ? "flex right-0"
+            :sidebarOpen? "flex right-0":"hidden -right-[100%]"
+        } lg:right-0 z-10 text-white lg:text-black lg:items-center lg:h-full roboto font-thin overflow-y-scroll lg:overflow-y-visible lg:w-fit`}
       >
         <IconContext.Provider value={{ color: "white" }}>
           <VscChromeClose
             className="absolute right-4 h- top-4 h-[1.7em] z-11 w-[1.7em] lg:hidden"
-            onClick={() => setSidebarOpen(false)}
+            onClick={() => {
+              setSidebarOpen(false)
+              console.log('click');
+            }}
           />
         </IconContext.Provider>
         <Link href="/">
@@ -54,7 +59,9 @@ const NavOps = ({ screenWidth }: NavOptsProps) => {
           >
             <span className="flex flex-row items-center justify-start gap-1">
               <p>About</p>
-              <FaAngleDown className={`rotate-${aboutOptsOpen?'180':'0'}`}/>
+              <FaAngleDown
+                className={`rotate-${aboutOptsOpen ? "180" : "0"}`}
+              />
             </span>
             <AboutOps screenWidth={screenWidth} aboutOptsOpen={aboutOptsOpen} />
           </li>
@@ -67,11 +74,6 @@ const NavOps = ({ screenWidth }: NavOptsProps) => {
         <Link href="/articles">
           <li className="py-5 px-3">
             <p>Articles</p>
-          </li>
-        </Link>
-        <Link href="/donate">
-          <li className="py-5 px-3">
-            <p>Donate</p>
           </li>
         </Link>
         <Link href="/project">
@@ -89,6 +91,13 @@ const NavOps = ({ screenWidth }: NavOptsProps) => {
         <Link href="/contact-us">
           <li className="py-5 px-3">
             <p>Contact Us</p>
+          </li>
+        </Link>
+        <Link href="/donate">
+          <li>
+            <div className="bg-sec rounded-full py-2 px-5">
+              <p className="text-white">Donate</p>
+            </div>
           </li>
         </Link>
       </ul>

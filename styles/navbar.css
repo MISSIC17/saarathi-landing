@@ -53,7 +53,7 @@
   }
   #about-hover-ops {
     padding: 0em 0em;
-    background: none;
+    background: white;
     transition: 300ms ease-out;
     display:flex;
   }

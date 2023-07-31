@@ -13,10 +13,13 @@ const AboutOps = ({screenWidth,aboutOptsOpen}:aboutOptsProps) => {
         <Link href="/about/our-board"><p>Our Board</p></Link>
       </li>
       <li>
-        <Link href="/about/our-tech-team"><p>Our Tech Team</p></Link>
+        <Link href="/about/our-team"><p>Our Team</p></Link>
       </li>
       <li>
         <Link href="/about/our-collaborators"><p>Our Collaborators</p></Link>
+      </li>
+      <li>
+        <Link href="/about/apparent-contributors"><p>Apparent Contributors</p></Link>
       </li>
     </div>
   );

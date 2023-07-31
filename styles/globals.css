@@ -6,15 +6,59 @@
   --primary: #003892;
   --sec: #dc143c;
   --tert: #64ab47;
-  --faint:#000000b3;
+  --faint: #000000b3;
 }
-body{
+*,
+*::before,
+*::after {
+  /* outline:1px solid red; */
+}
+body {
   max-width: 100vw;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 .vidaloka {
   font-family: "Vidaloka", serif;
 }
 .roboto {
   font-family: "Roboto", sans-serif;
+}
+#footer-icons > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 999px;
+  width: 35px;
+  height: 35px;
+  transition: 200ms ease;
+}
+#footer-icons > span:hover {
+  background-color: var(--primary);
+  background-color: white;
+  color: var(--primary);
+}
+#footer-links > div > ul > li {
+  transition: 200ms ease;
+}
+#footer-links > div > ul > li:hover {
+  text-decoration: underline;
+}
+#our-board-intro-wrapper {
+  background-image: linear-gradient(to right, rgb(0 0 0/ 1), rgb(0 0 0/ 0.01)),
+    url("../public/assets/our-board-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.board-member {
+  border-radius: 0.82463rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 56, 146, 0.1) 0%,
+    rgba(220, 20, 60, 0.1) 90.69%
+  );
+  box-shadow: 5.864077091217041px 5.864077091217041px 27.854368209838867px 0px
+      rgba(0, 0, 0, 0.34),
+    -5.864077091217041px -5.864077091217041px 27.854368209838867px 0px
+      rgba(255, 255, 255, 0.25);
 }
