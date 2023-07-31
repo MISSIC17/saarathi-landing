@@ -4,7 +4,7 @@ import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 const Footer = () => {
   return (
-    <footer className="absolute w-full mt-10 pl-8 gap-4 md:gap-4 bg-black flex flex-col md:flex-row justify-around items-start md:items-center py-10">
+    <footer className="absolute w-full pl-8 gap-4 md:gap-4 bg-black flex flex-col md:flex-row justify-around items-start md:items-center py-10">
       <Link href="/">
         <Image
           src="/assets/logo.png"

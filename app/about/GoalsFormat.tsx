@@ -10,7 +10,7 @@ interface goalsProps {
 }
 const GoalsFormat = ({ title, description }: goalsProps) => {
   return (
-    <div className="bg-primary grid grid-rows-[30%_70%] text-white p-4 justify-items-center max-w-[33em] rounded-lg shadow-[-3px_3px_0px_0px_#DC143C]">
+    <div className="bg-primary grid grid-rows-[30%_70%] max-w-[90vw] md:max-w-[33em] text-white p-4 pb-6 mb-6 justify-items-center rounded-lg shadow-[-3px_3px_0px_0px_#DC143C]">
       <p id="goals-title" className="relative font-bold w-fit h-[3ch] vidaloka first-letter:capitalize text-[1.3em]">{title}</p>
       <div className="flex flex-row gap-3 mt-4">
         {title === "mission" && (

@@ -4,7 +4,7 @@ const WhatWeDo = () => {
   return (
     <section
       id="what-we-do-wrapper"
-      className="grid justify-items-center mt-[5em] relative h-[90vh] md:h-auto gap-7"
+      className="grid justify-items-center mt-[5em] relative md:h-auto gap-7"
     >
       <div className="relative max-h-fit flex flex-col lg:scale-110">
         <p className="relative vidaloka text-3xl font-medium">What we do?</p>

@@ -7,7 +7,7 @@ export default function Page() {
     <main>
       <WhoWeAre showButton={false} />
       <WhatWeDo />
-      <div className="relative mt-10 lg:mt-5 w-full flex flex-col lg:flex-row gap-10 items-center lg:justify-center">
+      <div className="relative mt-10 lg:mt-5 w-full flex flex-col gap-10 items-center lg:justify-center">
         <GoalsFormat
           title="mission"
           description="Strive to enable, empower and make underprivileged people’s life easier by introducing various tech platforms and equipment."

@@ -13,6 +13,14 @@ const NavOps = ({ active }: navOpsProps) => {
   console.log(active);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [aboutOptsOpen, setAboutOptsOpen] = useState<boolean>(false);
+  useEffect(()=>{
+    if(sidebarOpen){
+      document.body.style.overflow = 'hidden';
+    }else{
+
+      document.body.style.overflow = 'auto';
+    }
+  },[sidebarOpen])
 
   return (
     <>

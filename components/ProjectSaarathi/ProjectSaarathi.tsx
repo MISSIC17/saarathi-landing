@@ -4,7 +4,7 @@ const ProjectSaarathi = () => {
   return (
     <section
       id="project-section-wrapper"
-      className="relative grid grid-cols-8 md:grid-cols-12 py-16 md:py-32 md:mt-[5em] min-w-[100vw]"
+      className="relative grid grid-cols-8 mt-6 md:grid-cols-12 py-16 md:py-32 md:mt-[5em] min-w-[100vw]"
     >
       <div className="text-white col-start-2 md:col-start-3 col-span-5 flex flex-col gap-7">
         <p id="project-title" className="text-5xl roboto font-extrabold">

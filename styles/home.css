@@ -19,11 +19,11 @@
   border-radius: 0 50px 50px 0;
 }
 #intro-wrapper {
-  height: 85vh;
+  min-height: calc(100vh - 102px);
 }
 @media screen and (min-width: 768px) {
   #intro-wrapper {
-    min-height: calc(100vh - 102px);
+    max-height: calc(100vh - 102px);
   }
   #intro-rect {
     background: linear-gradient(276deg, #f83e3e 0%, rgba(248, 62, 62, 0) 100%);

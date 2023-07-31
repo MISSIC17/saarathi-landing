@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Intro = () => {
   return (
-    <section id="intro-wrapper" className="grid relative sm:h-[90vh] md:h-[90vh] top-5 md:top-2 overflow-hidden">
+    <section id="intro-wrapper" className="grid relative overflow-hidden">
       <div id="intro-rect" className="relative w-[95vw] max-h-[90vh] md:w-[85vw] border-[1.5px]   md:border-[0px] flex items-center justify-center">
-        <div id="intro-text" className="relative flex flex-col w-fit z-[6]">
+        <div id="intro-text" className="relative flex flex-col w-fit z-[6] top-[-3em]">
           <h1
             id="intro-heading"
             className="flex roboto font-bold justify-center whitespace-nowrap"
@@ -29,7 +29,7 @@ const Intro = () => {
           alt="Image with people helping each other"
           height="500"
           width="500"
-          className="block absolute -bottom-[20%] z-10 sm:max-w-[90vw] md:max-w-[90vw]  -left-[10%] md:bottom-0 md:left-0 md:-z-10"
+          className="block absolute -bottom-[10%] z-10 sm:max-w-[90vw] md:max-w-[90vw]  -left-[10%] md:bottom-0 md:left-0 md:-z-10"
         />
       </div>
     </section>
