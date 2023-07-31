@@ -1,6 +1,6 @@
 const boardMembers = [
     {
-       fname:'Niraj Raj Lamsal',
+       fname:'Niraj Raj Adhikari',
        post:'President',
        image:'/board/niraj.jpeg'
     },

@@ -69,11 +69,9 @@ const WhoWeAre = ({ showButton }: whatProps) => {
           the social welfare sector, particularly in the aidtech field.
         </p>
         {showButton && (
-          <Link href="/about-us">
-            <button className="relative flex flex-row items-center mt-16 gap-3 px-6 py-3 border-2 rounded-lg left-1/2 -translate-x-1/2">
+            <Link href="/about" className="relative flex flex-row items-center mt-16 gap-3 px-6 py-3 w-fit border-2 rounded-lg left-1/2 -translate-x-1/2">
               <p>More about us</p>
               <HiArrowNarrowRight className="w-[1.8em] h-[1.8em]" />
-            </button>
           </Link>
         )}
       </div>

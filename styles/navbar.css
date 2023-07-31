@@ -47,6 +47,11 @@
   background: none;
   transition: 300ms ease-out;
 }
+#about-hover-ops > a {
+  width: 100%;
+  padding: 0.5em 1em 0.5em 0.5em;
+  transition: 200ms ease-out;
+}
 @media screen and (min-width: 1024px) {
   #navops {
     background: none;
@@ -55,21 +60,21 @@
     padding: 0em 0em;
     background: white;
     transition: 300ms ease-out;
-    display:flex;
+    display: flex;
   }
 
-  #about-hover-ops > span {
+  #about-hover-ops > a {
     width: 100%;
-    padding: 0.5em 1em 0.5em 0.5em;
+    padding: 0.5em 2em 0.5em 1em;
     transition: 200ms ease-out;
   }
-  #about-hover-ops > span:hover {
+  #about-hover-ops > a:hover {
     background-color: rgba(0, 56, 146, 0.1);
   }
-  #about-hover-ops > span > a > p {
+  #about-hover-ops > a > p {
     transition: 200ms ease-out;
   }
-  #about-hover-ops > span:hover > a > p {
+  #about-hover-ops > a:hover > p {
     transform: translateX(10%);
   }
   #about-hover-ops {
@@ -83,10 +88,4 @@
     opacity: 1;
     transform: translateY(0%) scaleY(1);
   }
-}
-
-#about-hover-ops > span {
-  width: 100%;
-  padding: 0.5em 1em 0.5em 0.5em;
-  transition: 200ms ease-out;
 }

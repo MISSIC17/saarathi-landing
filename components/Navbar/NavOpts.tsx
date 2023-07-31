@@ -6,12 +6,17 @@ import Link from "next/link";
 import AboutOps from "./AboutOps";
 import { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
-const NavOps = () => {
+interface navOpsProps {
+  active: string;
+}
+const NavOps = ({ active }: navOpsProps) => {
+  console.log(active);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [aboutOptsOpen, setAboutOptsOpen] = useState<boolean>(false);
+
   return (
     <>
-      <div className="lg:hidden" onClick={() => setSidebarOpen(true)}>
+      <div className="lg:hidden cursor-pointer" onClick={() => setSidebarOpen(true)}>
         <RxHamburgerMenu className="w-[1.7em] h-[1.7em]" />
       </div>
       <ul
@@ -22,7 +27,7 @@ const NavOps = () => {
       >
         <IconContext.Provider value={{ color: "white" }}>
           <VscChromeClose
-            className="absolute right-4 h- top-4 h-[1.7em] z-11 w-[1.7em] lg:hidden"
+            className="absolute cursor-pointer right-4 h- top-4 h-[1.7em] z-11 w-[1.7em] lg:hidden"
             onClick={() => {
               setSidebarOpen(false);
               console.log("click");
@@ -36,16 +41,20 @@ const NavOps = () => {
         </Link>
 
         {/* For mobile*/}
-        <li
-          className="py-5 px-3 cursor-pointer lg:hidden"
-          onClick={() => setAboutOptsOpen(!aboutOptsOpen)}
-        >
-          <span className="flex flex-row items-center justify-start gap-1">
-            <p>About</p>
-            <FaAngleDown className={`rotate-${aboutOptsOpen ? "180" : "0"}`} />
-          </span>
-          <AboutOps aboutOptsOpen={aboutOptsOpen} />
-        </li>
+        <div>
+          <li
+            className="py-5 px-3 cursor-pointer lg:hidden"
+            onClick={() => setAboutOptsOpen(!aboutOptsOpen)}
+          >
+            <span className="flex flex-row items-center justify-start gap-1">
+              <p>About</p>
+              <FaAngleDown
+                className={`rotate-${aboutOptsOpen ? "180" : "0"}`}
+              />
+            </span>
+          </li>
+        <AboutOps setSidebarOpen={setSidebarOpen} aboutOptsOpen={aboutOptsOpen} />
+        </div>
         {/* For larger*/}
         <li id="about-ops" className="py-5 px-3 hidden lg:block">
           <Link href="/about" className="">
@@ -54,7 +63,7 @@ const NavOps = () => {
               <FaAngleDown />
             </span>
           </Link>
-          <AboutOps aboutOptsOpen={aboutOptsOpen} />
+          <AboutOps setSidebarOpen={setSidebarOpen} aboutOptsOpen={aboutOptsOpen} />
         </li>
 
         <Link href="/news">

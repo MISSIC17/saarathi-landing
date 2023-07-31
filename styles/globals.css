@@ -56,6 +56,20 @@ body {
   background-size: cover;
   background-position: center;
 }
+#apparent-intro-wrapper {
+  background-image: linear-gradient(to right, rgb(0 0 0/ 1), rgb(0 0 0/ 0.01)),
+    url("../public/assets/apparent.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#our-partners-intro-wrapper {
+  background-image: linear-gradient(to right, rgb(0 0 0/ 1), rgb(0 0 0/ 0.01)),
+    url("../public/assets/partners.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height:calc(100vh - 102px)
+}
+
 .member {
   border-radius: 0.82463rem;
   background: linear-gradient(
@@ -67,4 +81,25 @@ body {
       rgba(0, 0, 0, 0.34),
     -5.864077091217041px -5.864077091217041px 27.854368209838867px 0px
       rgba(255, 255, 255, 0.25);
+}
+.custom-shape-divider-bottom-1690809554 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1690809554 svg {
+  position: relative;
+  display: block;
+  width: calc(240% + 1.3px);
+  height: 73px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1690809554 .shape-fill {
+  fill: #003892;
 }
