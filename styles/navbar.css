@@ -58,18 +58,18 @@
     display:flex;
   }
 
-  #about-hover-ops > li {
+  #about-hover-ops > span {
     width: 100%;
     padding: 0.5em 1em 0.5em 0.5em;
     transition: 200ms ease-out;
   }
-  #about-hover-ops > li:hover {
+  #about-hover-ops > span:hover {
     background-color: rgba(0, 56, 146, 0.1);
   }
-  #about-hover-ops > li > a > p {
+  #about-hover-ops > span > a > p {
     transition: 200ms ease-out;
   }
-  #about-hover-ops > li:hover > a > p {
+  #about-hover-ops > span:hover > a > p {
     transform: translateX(10%);
   }
   #about-hover-ops {
@@ -85,7 +85,7 @@
   }
 }
 
-#about-hover-ops > li {
+#about-hover-ops > span {
   width: 100%;
   padding: 0.5em 1em 0.5em 0.5em;
   transition: 200ms ease-out;

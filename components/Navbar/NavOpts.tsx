@@ -6,33 +6,26 @@ import Link from "next/link";
 import AboutOps from "./AboutOps";
 import { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
-interface NavOptsProps {
-  screenWidth: number;
-}
-const NavOps = ({ screenWidth }: NavOptsProps) => {
+const NavOps = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [aboutOptsOpen, setAboutOptsOpen] = useState<boolean>(false);
   return (
     <>
-      {screenWidth < 1024 && (
-        <div onClick={() => setSidebarOpen(true)}>
-          <RxHamburgerMenu className="w-[1.7em] h-[1.7em]" />
-        </div>
-      )}
+      <div className="lg:hidden" onClick={() => setSidebarOpen(true)}>
+        <RxHamburgerMenu className="w-[1.7em] h-[1.7em]" />
+      </div>
       <ul
         id="navops"
-        className={`absolute px-4 lg:relative flex-col text-[1.2em] lg:text-[1em] lg:flex-row items-start lg:justify-center bg-primary lg:bg-opacity-0 top-0 h-[100vh] w-[90vw] ${
-          screenWidth >= 1024
-            ? "flex right-0"
-            :sidebarOpen? "flex right-0":"hidden -right-[100%]"
+        className={`absolute px-4 lg:relative flex-col text-[1.2em] lg:text-[1em] lg:flex-row items-start lg:justify-center bg-primary lg:bg-opacity-0 top-0 h-[100vh] w-[90vw]  lg:flex lg:right-0 ${
+          sidebarOpen ? "flex right-0" : "hidden -right-[100%]"
         } lg:right-0 z-10 text-white lg:text-black lg:items-center lg:h-full roboto font-thin overflow-y-scroll lg:overflow-y-visible lg:w-fit`}
       >
         <IconContext.Provider value={{ color: "white" }}>
           <VscChromeClose
             className="absolute right-4 h- top-4 h-[1.7em] z-11 w-[1.7em] lg:hidden"
             onClick={() => {
-              setSidebarOpen(false)
-              console.log('click');
+              setSidebarOpen(false);
+              console.log("click");
             }}
           />
         </IconContext.Provider>
@@ -41,31 +34,29 @@ const NavOps = ({ screenWidth }: NavOptsProps) => {
             <p className="active">Home</p>
           </li>
         </Link>
-        {screenWidth >= 1024 && (
-          <Link id="about-ops" href="/about">
-            <li className="py-5 px-3">
-              <span className="flex flex-row items-center justify-center gap-1">
-                <p>About</p>
-                <FaAngleDown />
-              </span>
-            </li>
-            <AboutOps screenWidth={screenWidth} aboutOptsOpen={aboutOptsOpen} />
-          </Link>
-        )}
-        {screenWidth < 1024 && (
-          <li
-            className="py-5 px-3 cursor-pointer"
-            onClick={() => setAboutOptsOpen(!aboutOptsOpen)}
-          >
-            <span className="flex flex-row items-center justify-start gap-1">
+
+        {/* For mobile*/}
+        <li
+          className="py-5 px-3 cursor-pointer lg:hidden"
+          onClick={() => setAboutOptsOpen(!aboutOptsOpen)}
+        >
+          <span className="flex flex-row items-center justify-start gap-1">
+            <p>About</p>
+            <FaAngleDown className={`rotate-${aboutOptsOpen ? "180" : "0"}`} />
+          </span>
+          <AboutOps aboutOptsOpen={aboutOptsOpen} />
+        </li>
+        {/* For larger*/}
+        <li id="about-ops" className="py-5 px-3 hidden lg:block">
+          <Link href="/about" className="">
+            <span className="flex flex-row items-center justify-center gap-1">
               <p>About</p>
-              <FaAngleDown
-                className={`rotate-${aboutOptsOpen ? "180" : "0"}`}
-              />
+              <FaAngleDown />
             </span>
-            <AboutOps screenWidth={screenWidth} aboutOptsOpen={aboutOptsOpen} />
-          </li>
-        )}
+          </Link>
+          <AboutOps aboutOptsOpen={aboutOptsOpen} />
+        </li>
+
         <Link href="/news">
           <li className="py-5 px-3">
             <p>News</p>

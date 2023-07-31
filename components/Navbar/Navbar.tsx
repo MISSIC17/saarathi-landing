@@ -2,21 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavOps from "./NavOpts";
-import { useEffect, useState } from "react";
 const Navbar = () => {
-  const [screenWidth, setScreenWidth] = useState<number>(window?.innerWidth || 0);
-  function resizeHandler() {
-    setScreenWidth(window.innerWidth);
-    console.log(screenWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("load", resizeHandler);
-    return () => window.removeEventListener("load", resizeHandler);
-  }, [screenWidth]);
-  useEffect(() => {
-    window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, [screenWidth]);
   return (
     <nav
       id="navbar"
@@ -31,7 +17,7 @@ const Navbar = () => {
           className="w-[70px] h-[70px]"
         />
       </Link>
-      <NavOps screenWidth={screenWidth} />
+      <NavOps />
     </nav>
   );
 };
