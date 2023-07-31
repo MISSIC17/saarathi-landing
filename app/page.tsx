@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Intro from "@/components/Home/Intro";
-import WhoWeAre from "@/components/Home/WhoWeAre";
+import WhoWeAre from "@/components/WhoWeAre";
 export default function Page() {
   return (
     <main>
