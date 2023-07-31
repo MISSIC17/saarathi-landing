@@ -50,7 +50,13 @@ body {
   background-size: cover;
   background-position: center;
 }
-.board-member {
+#our-team-intro-wrapper {
+  background-image: linear-gradient(to right, rgb(0 0 0/ 1), rgb(0 0 0/ 0.01)),
+    url("../public/assets/team.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.member {
   border-radius: 0.82463rem;
   background: linear-gradient(
     135deg,

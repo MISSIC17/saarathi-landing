@@ -1,4 +1,4 @@
-import Intro from "@/components/Home/Intro";
+import Intro from "@/components/Intro";
 import WhoWeAre from "@/components/WhoWeAre";
 export default function Page() {
   return (
