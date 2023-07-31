@@ -1,12 +1,12 @@
 const boardMembers = [
     {
        fname:'Niraj Raj Adhikari',
-       post:'President',
+       post:'President, Co-Founder',
        image:'/board/niraj.jpeg'
     },
     {
        fname:'Alish Jung Karki',
-       post:'President',
+       post:'General Secretary, Co-Founder',
        image:'/board/alish.png'
     },
     {
