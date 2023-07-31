@@ -23,7 +23,7 @@ body {
 .roboto {
   font-family: "Roboto", sans-serif;
 }
-#footer-icons > span {
+#footer-icons > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@ body {
   height: 35px;
   transition: 200ms ease;
 }
-#footer-icons > span:hover {
+#footer-icons > a:hover {
   background-color: var(--primary);
   background-color: white;
   color: var(--primary);

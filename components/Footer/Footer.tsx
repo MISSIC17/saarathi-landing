@@ -14,7 +14,10 @@ const Footer = () => {
           className="w-[100px] h-[100px]"
         />
       </Link>
-      <div id="footer-links" className="roboto font-thin text-fWhite text-[1em] flex flex-row items-end gap-5">
+      <div
+        id="footer-links"
+        className="roboto font-thin text-fWhite text-[1em] flex flex-row items-end gap-5"
+      >
         <div>
           <ul>
             <li>
@@ -56,17 +59,23 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-        <div id="footer-icons" className="flex flex-row self-center md:self-auto mt-4 md:mt-0 gap-5 text-white" >
-          <span>
-            <FaFacebook className="min-w-[17px] min-h-[17px]"/>
-          </span>
-          <span> 
-            <SiGmail className="min-w-[17px] min-h-[17px]"/>
-          </span>
-          <span> 
-            <FaLinkedinIn className="min-w-[17px] min-h-[17px]"/>
-          </span>
-        </div>
+      <div
+        id="footer-icons"
+        className="flex flex-row self-center md:self-auto mt-4 md:mt-0 gap-5 text-white"
+      >
+        <Link href="https://www.facebook.com/wesaarathi" target={"_blank"}>
+          <FaFacebook className="min-w-[17px] min-h-[17px]" />
+        </Link>
+        <Link
+          href="https://mail.google.com/mail/u/0/?fs=1&to=wesaarathi@gmail.com&su=SUBJECT&body=BODY&tf=cm"
+          target={"_blank"}
+        >
+          <SiGmail className="min-w-[17px] min-h-[17px]" />
+        </Link>
+        <Link href="https://www.linkedin.com/" target={"_blank"}>
+          <FaLinkedinIn className="min-w-[17px] min-h-[17px]" />
+        </Link>
+      </div>
     </footer>
   );
 };

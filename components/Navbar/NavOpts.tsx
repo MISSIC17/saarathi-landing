@@ -13,12 +13,12 @@ const NavOps = ({ active }: navOpsProps) => {
   console.log(active);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [aboutOptsOpen, setAboutOptsOpen] = useState<boolean>(false);
+  
   useEffect(()=>{
     if(sidebarOpen){
-      document.body.style.overflow = 'hidden';
+      !document.body.classList.contains('sm:overflow-hidden')?document.body.classList.add('overflow-hidden','lg:overflow-auto'):{};
     }else{
-
-      document.body.style.overflow = 'auto';
+      document.body.classList.contains('sm:overflow-hidden')?document.body.classList.remove('sm:overflow-hidden'):{};
     }
   },[sidebarOpen])
 
@@ -84,7 +84,7 @@ const NavOps = ({ active }: navOpsProps) => {
             <p>Articles</p>
           </li>
         </Link>
-        <Link href="/project">
+        <Link href="/project-saarathi">
           <li>
             <div className="bg-primary rounded-lg py-2 px-1.5">
               <p className="text-white">Project Saarathi</p>

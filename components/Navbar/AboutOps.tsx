@@ -15,7 +15,7 @@ const AboutOps = ({ setSidebarOpen, aboutOptsOpen }: aboutOptsProps) => {
         link.removeEventListener("click", () => setSidebarOpen(false));
       });
     };
-  },[aboutOptsOpen]);
+  });
   return (
     <div
       id="about-hover-ops"
