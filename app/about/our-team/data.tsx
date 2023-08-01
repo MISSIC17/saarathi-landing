@@ -16,6 +16,11 @@ const teamMembers = [
        image:'/team/samrat.jpg'
     },
     {
+       fname:'Ishwor Thapa',
+       post:'Front-end Dev',
+       image:'/team/grey.png'
+    },
+    {
        fname:'Samrid Pandit',
        post:'Back-end Dev',
        image:'/board/samrid.jpg'
