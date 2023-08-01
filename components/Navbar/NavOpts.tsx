@@ -6,6 +6,8 @@ import Link from "next/link";
 import AboutOps from "./AboutOps";
 import { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 interface navOpsProps {
   active: string;
 }
@@ -95,7 +97,9 @@ const NavOps = ({ active }: navOpsProps) => {
         </Link>
         <Link href="/articles">
           <li className="py-5 px-3">
-            <p className={`${active === "articles" ? "active" : ""}`}>Articles</p>
+            <p className={`${active === "articles" ? "active" : ""}`}>
+              Articles
+            </p>
           </li>
         </Link>
         <Link href="/project-saarathi">
@@ -126,6 +130,25 @@ const NavOps = ({ active }: navOpsProps) => {
             </div>
           </li>
         </Link>
+        <div className="hidden lg:block border-l-fBlack border-l-[1px] pl-5 ml-5">
+          <div
+            id="nav-icons"
+            className="flex flex-row self-center md:self-auto mt-4 md:mt-0 gap-6 text-fBlack"
+          >
+            <Link href="https://www.facebook.com/wesaarathi" target={"_blank"}>
+              <FaFacebook className="" />
+            </Link>
+            <Link
+              href="https://mail.google.com/mail/u/0/?fs=1&to=wesaarathi@gmail.com&su=SUBJECT&body=BODY&tf=cm"
+              target={"_blank"}
+            >
+              <SiGmail className="" />
+            </Link>
+            <Link href="https://www.linkedin.com/" target={"_blank"}>
+              <FaLinkedinIn className="" />
+            </Link>
+          </div>
+        </div>
       </ul>
     </>
   );

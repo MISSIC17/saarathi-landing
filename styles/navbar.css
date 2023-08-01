@@ -93,3 +93,48 @@
   #about-ops:hover > a > span > p {
   }
 }
+
+#nav-icons > a {
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+  /* background-color: var(--primary); */
+  border-radius: 999px;
+  transition: 200ms ease;
+}
+#nav-icons > a > svg {
+  width: 20px;
+  height: 20px;
+  transition: 200ms ease;
+  color: rgba(103, 101, 101, 0.534);
+}
+#nav-icons > a:hover > svg {
+  color: var(--primary);
+  /* animation: icons 300ms forwards; */
+}
+/* #nav-icons > a:hover {
+  background-color: var(--primary);
+  /* animation: icons 300ms forwards; */
+
+/* @keyframes icons {
+  0% {k
+    translate: 0% -20%;
+  }
+  30% {
+    translate: 0% -20%;
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(0);
+    translate: 0% 20%;
+  }
+  80% {
+    translate: 0% 20%;
+    color: var(--primary);
+  }
+  100% {
+    translate: 0% 0%;
+    color: var(--primary);
+  }
+} */
