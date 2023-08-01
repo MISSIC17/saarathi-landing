@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import NavOps from "./NavOpts";
 import {usePathname} from "next/navigation" 
+import extractRoute from "./extractRoute";
 const Navbar = () => {
   const pathname = usePathname();
+  const active = extractRoute(pathname);
   return (
     <nav
       id="navbar"
@@ -19,7 +21,7 @@ const Navbar = () => {
           className="w-[70px] h-[70px]"
         />
       </Link>
-      <NavOps active={pathname} />
+      <NavOps active={active} />
     </nav>
   );
 };

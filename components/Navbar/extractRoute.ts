@@ -1,4 +1,12 @@
-export default function extractRoute({ pathname }: { pathname: string }) {
-    let s = 0;
-    pathname.slice(1,pathname.length).split('').find((letter)=>letter==='/')?.length;
+export default function extractRoute(pathname: string) {
+  if (pathname === "/") return "home";
+  let s = pathname
+    .slice(1, pathname.length)
+    .split("")
+    .findIndex((letter) => letter === "/");
+    console.log(s,pathname)
+  if (s === -1) {
+    return pathname.slice(1, pathname.length);
+  }
+  return pathname.slice(1, s+1);
 }

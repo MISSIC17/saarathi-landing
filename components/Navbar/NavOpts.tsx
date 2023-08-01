@@ -13,18 +13,25 @@ const NavOps = ({ active }: navOpsProps) => {
   console.log(active);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [aboutOptsOpen, setAboutOptsOpen] = useState<boolean>(false);
-  
-  useEffect(()=>{
-    if(sidebarOpen){
-      !document.body.classList.contains('sm:overflow-hidden')?document.body.classList.add('overflow-hidden','lg:overflow-auto'):{};
-    }else{
-      document.body.classList.contains('sm:overflow-hidden')?document.body.classList.remove('sm:overflow-hidden'):{};
+
+  useEffect(() => {
+    if (sidebarOpen) {
+      !document.body.classList.contains("sm:overflow-hidden")
+        ? document.body.classList.add("overflow-hidden", "lg:overflow-auto")
+        : {};
+    } else {
+      document.body.classList.contains("sm:overflow-hidden")
+        ? document.body.classList.remove("sm:overflow-hidden")
+        : {};
     }
-  },[sidebarOpen])
+  }, [sidebarOpen]);
 
   return (
     <>
-      <div className="lg:hidden cursor-pointer" onClick={() => setSidebarOpen(true)}>
+      <div
+        className="lg:hidden cursor-pointer"
+        onClick={() => setSidebarOpen(true)}
+      >
         <RxHamburgerMenu className="w-[1.7em] h-[1.7em]" />
       </div>
       <ul
@@ -42,9 +49,9 @@ const NavOps = ({ active }: navOpsProps) => {
             }}
           />
         </IconContext.Provider>
-        <Link href="/">
+        <Link href="/" className={`link`}>
           <li className="aboutOps-text mt-10 lg:mt-0 py-5 px-3">
-            <p className="active">Home</p>
+            <p className={`${active === "home" ? "active" : ""}`}>Home</p>
           </li>
         </Link>
 
@@ -61,27 +68,34 @@ const NavOps = ({ active }: navOpsProps) => {
               />
             </span>
           </li>
-        <AboutOps setSidebarOpen={setSidebarOpen} aboutOptsOpen={aboutOptsOpen} />
+          <AboutOps
+            setSidebarOpen={setSidebarOpen}
+            aboutOptsOpen={aboutOptsOpen}
+          />
         </div>
+
         {/* For larger*/}
-        <li id="about-ops" className="py-5 px-3 hidden lg:block">
-          <Link href="/about" className="">
-            <span className="flex flex-row items-center justify-center gap-1">
-              <p>About</p>
+        <li id="about-ops" className="desktop hidden lg:block cursor-pointer">
+          <Link href="/about">
+            <span className="py-5 px-3 flex flex-row items-center justify-center gap-1">
+              <p className={`${active === "about" ? "active" : ""}`}>About</p>
               <FaAngleDown />
             </span>
           </Link>
-          <AboutOps setSidebarOpen={setSidebarOpen} aboutOptsOpen={aboutOptsOpen} />
+          <AboutOps
+            setSidebarOpen={setSidebarOpen}
+            aboutOptsOpen={aboutOptsOpen}
+          />
         </li>
 
         <Link href="/news">
           <li className="py-5 px-3">
-            <p>News</p>
+            <p className={`${active === "news" ? "active" : ""}`}>News</p>
           </li>
         </Link>
         <Link href="/articles">
           <li className="py-5 px-3">
-            <p>Articles</p>
+            <p className={`${active === "articles" ? "active" : ""}`}>Articles</p>
           </li>
         </Link>
         <Link href="/project-saarathi">
@@ -93,12 +107,16 @@ const NavOps = ({ active }: navOpsProps) => {
         </Link>
         <Link href="/get-involved">
           <li className="py-5 px-3">
-            <p>Get Involved</p>
+            <p className={`${active === "get-involved" ? "active" : ""}`}>
+              Get Involved
+            </p>
           </li>
         </Link>
         <Link href="/contact-us">
           <li className="py-5 px-3">
-            <p>Contact Us</p>
+            <p className={`${active === "contact-us" ? "active" : ""}`}>
+              Contact Us
+            </p>
           </li>
         </Link>
         <Link href="/donate">

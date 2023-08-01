@@ -4,11 +4,11 @@
   --tert: #64ab47;
 }
 #navops > a > li > p,
-#navops > a > li > span > p {
+#navops > li > a > span > p {
   position: relative;
 }
 #navops > a > li > p::after,
-#navops > a > li > span > p::after {
+#navops > li > a > span > p::after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -30,7 +30,7 @@
   background: #dc143c;
 }
 #navops > a:hover > li > p::after,
-#navops > a:hover > li > span > p::after {
+#navops > li:hover > a > span > p::after {
   width: 105%;
 }
 #navops {
@@ -87,5 +87,9 @@
     display: flex;
     opacity: 1;
     transform: translateY(0%) scaleY(1);
+  }
+}
+@media screen and(min-width:1024px) {
+  #about-ops:hover > a > span > p {
   }
 }

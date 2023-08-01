@@ -24,19 +24,19 @@ const AboutOps = ({ setSidebarOpen, aboutOptsOpen }: aboutOptsProps) => {
         aboutOptsOpen ? "flex" : "hidden"
       } pt-2 roboto font-light text-sm lg:flex flex-col lg:absolute z-10 text-fWhite lg:text-fBlack lg:bg-white lg:shadow-lg`}
     >
-      <Link href="/about">
+      <Link href="/about" className="link">
         <p>About us</p>
       </Link>
-      <Link href="/about/our-board">
+      <Link href="/about/our-board" className="link">
         <p>Our Board</p>
       </Link>
-      <Link href="/about/our-team">
+      <Link href="/about/our-team" className="link">
         <p>Our Team</p>
       </Link>
-      <Link href="/about/our-partners">
+      <Link href="/about/our-partners" className="link">
         <p>Our Partners</p>
       </Link>
-      <Link href="/about/apparent-contributors">
+      <Link href="/about/apparent-contributors" className="link">
         <p>Apparent Contributors</p>
       </Link>
     </div>
