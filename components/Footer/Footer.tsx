@@ -51,7 +51,7 @@ const Footer = () => {
               <Link href="/articles">Articles</Link>
             </li>
             <li>
-              <Link href="/project-saarathi">Project Saarathi</Link>
+              <Link href="https://saraathii-frontend-hvq6.vercel.app/">Project Saarathi</Link>
             </li>
             <li>
               <Link href="/get-involved">Get involved</Link>

@@ -18,7 +18,7 @@ const ProjectSaarathi = () => {
           to overcome challenges and realize their educational dreams.
         </p>
         <Link
-          href="/project-saarathi"
+          href="https://saraathii-frontend-hvq6.vercel.app/"
           className="relative bg-white text-black flex flex-row items-center mt-16 gap-3 px-6 py-3 w-fit border-2 rounded-lg"
         >
           <p className="whitespace-nowrap">Join us</p>
