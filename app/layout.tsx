@@ -3,7 +3,6 @@ import "@/styles/navbar.css";
 import "@/styles/home.css"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import HeadTag from "@/components/HeadTag";
 
 export default function RootLayout({
   children,
