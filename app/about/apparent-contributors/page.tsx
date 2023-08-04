@@ -1,6 +1,12 @@
 import apparentContributors from "./data";
 import Member from "../Member";
 import IntroSection from "./IntroSection";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Apparent Contributors | We-Saarathi",
+  description:
+    "We-Saarathi is a recently established organization founded by zealous young Nepalese socio- tech visionaries who are committed to using their expertise and knowledge to benefit their society.",
+};
 export default function Page() {
   return (
     <main className="grid lg:grid-cols-12">
