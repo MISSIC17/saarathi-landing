@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <section id="intro-wrapper" className="grid relative overflow-hidden">
       <div id="intro-rect" className="relative w-[95vw] max-h-[90vh] md:w-[85vw] border-[1.5px]   md:border-[0px] flex items-center justify-center">
-        <div id="intro-text" className="relative flex flex-col w-fit z-[6] top-[-3em]">
+        <div id="intro-text" className="relative flex flex-col w-fit md:right-[5em] lg:right-[1em] top-[-3em] z-[11]">
           <h1
             id="intro-heading"
             className="flex roboto font-bold justify-center whitespace-nowrap"

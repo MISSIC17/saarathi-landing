@@ -42,10 +42,10 @@
       #fff
     );
     transform: rotate(27deg);
-    width: 70%;
+    width: 80%;
     height: 250%;
     z-index: 5;
-    right: -15%;
+    right: -21%;
   }
   #intro-heading {
     font-size: clamp(3.29769rem, calc(3em + 6vw), 7.8em);
