@@ -4,7 +4,6 @@ export default function extractRoute(pathname: string) {
     .slice(1, pathname.length)
     .split("")
     .findIndex((letter) => letter === "/");
-    console.log(s,pathname)
   if (s === -1) {
     return pathname.slice(1, pathname.length);
   }
