@@ -102,7 +102,7 @@ const NavOps = ({ active }: navOpsProps) => {
             </p>
           </li>
         </Link>
-        <Link href="https://saraathii-frontend-hvq6.vercel.app/">
+        <Link href="https://project.wesaarathi.org/">
           <li>
             <div className="bg-primary rounded-lg py-2 px-1.5">
               <p className="text-white">Project Saarathi</p>
